@@ -1,0 +1,64 @@
+引入泛型：延迟声明：
+	延迟声明: 把参数类型的声明推迟到调用
+	不是语法糖，而是由框架升级提供的功能
+如何声明和使用泛型：
+	声明泛型
+    /// <typeparam name="T">调用时传递的类型  不传递的话  会按照参数值来推算参数的类型</typeparam>
+    /// <param name="tParameter"></param>
+    public static void Show<T>(T tParameter)
+    {
+        Console.WriteLine("This is {0},parameter={1},type={2}",
+            typeof(GenericMethod), tParameter.GetType().Name, tParameter.ToString());
+    }
+	使用泛型
+	GenericMethod.Show<int>(iValue);
+    GenericMethod.Show(iValue);//不写类型 默认会自动推算
+泛型的好处和原理
+	2.0推出的新语法
+	泛型方法 解决用一个方法，满足不同的参数类型：做相同的事
+	没有写死参数类型，调用的时候才指定类型
+泛型类、泛型方法、泛型接口、泛型委托、继承(实现)泛型接口
+	泛型类
+		public class GenericClass<T>{}
+	泛型方法
+		public static void Show<T>(T tParameter){}
+	泛型接口
+		public interface GenericInterface<T>{}
+	泛型委托
+		public delegate void SayHi<T>(T t);
+	继承(实现)泛型接口
+		实现泛型接口时 要么在泛型接口处指定类型  要么在实现类处与泛型接口同类型
+泛型约束:
+	因为泛型在使用时不同的参数类型都可以传进来，在声明时无法获取类型中的结构
+	泛型约束--基类约束：(不能是sealed) 约束可以叠加  更灵活
+        1.限制后获取指定的类型及子类 可以基类的一切属性和方法
+        2.强制保证T一定是限制的类型或它的子类
+			where T:IXXX  //接口约束
+			where T:class //引用类型约束
+			where T:struct //值类型约束
+			where T:new()  //无参数构造函数约束
+协变(out) 逆变(in):
+	协变只能用在接口和委托上
+	//out(协变) 代表T只能作为方法的返回值类型来使用
+	public interface IEnumerable<out T>:IEnumerable
+	{
+		IEnumerable<T> GetEnumerator();
+	}
+	//in(逆变) 代表T只能作为方法的参数类型来使用
+	public interface IEnumerable<out T>:IEnumerable
+	{
+		IEnumerable GetEnumerator(T t);
+	}
+	
+泛型缓存:
+	正常境况下：类中的执行顺序  静态字段-->静态构造函数-->静态方法
+		静态的：静态属性、静态方法、静态类(仅有一个)存在于堆中，
+		 静态一旦创建，生命周期就会从创建开始到该程序结束才会死亡  供对象实例共享
+	泛型类会为不同的类型创建不同的副本
+		每次执行时都会创建不同的副本，对象实例拿到的静态属性也会不同
+		但是在程序结束前 执行第二次就不会再创建静态的了，因为在堆中已经存在了
+		不能主动释放
+	应用场景：
+		适合不同类型，需要缓存一份数据的场景，效率高
+应用场景：
+	用一个方法，满足不同的参数类型：做相同的事

@@ -1,0 +1,9 @@
+特性attribute,和注释有什么区别
+
+声明和使用attribute,AttributeUsage
+
+运行中获取attribute：额外信息  额外操作
+
+Remark封装、attribute验证
+
+作业部署

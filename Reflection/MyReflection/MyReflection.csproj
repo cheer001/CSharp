@@ -5,4 +5,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Demo.DB.Interface\Demo.DB.Interface.csproj" />
+    <ProjectReference Include="..\Demo.DB.MySql\Demo.DB.MySql.csproj" />
+    <ProjectReference Include="..\Demo.DB.SqlServer\Demo.DB.SqlServer.csproj" />
+  </ItemGroup>
+
 </Project>

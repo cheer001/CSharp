@@ -1,0 +1,9 @@
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.Interface\bin\Debug\netstandard2.0\Demo.DB.Interface.deps.json
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.Interface\bin\Debug\netstandard2.0\Demo.DB.Interface.dll
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.Interface\bin\Debug\netstandard2.0\Demo.DB.Interface.pdb
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.Interface\obj\Debug\netstandard2.0\Demo.DB.Interface.csprojAssemblyReference.cache
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.Interface\obj\Debug\netstandard2.0\Demo.DB.Interface.AssemblyInfoInputs.cache
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.Interface\obj\Debug\netstandard2.0\Demo.DB.Interface.AssemblyInfo.cs
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.Interface\obj\Debug\netstandard2.0\Demo.DB.Interface.csproj.CoreCompileInputs.cache
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.Interface\obj\Debug\netstandard2.0\Demo.DB.Interface.dll
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.Interface\obj\Debug\netstandard2.0\Demo.DB.Interface.pdb

@@ -1,0 +1,12 @@
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.MySql\bin\Debug\netstandard2.0\Demo.DB.MySql.deps.json
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.MySql\bin\Debug\netstandard2.0\Demo.DB.MySql.dll
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.MySql\bin\Debug\netstandard2.0\Demo.DB.MySql.pdb
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.MySql\bin\Debug\netstandard2.0\Demo.DB.Interface.dll
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.MySql\bin\Debug\netstandard2.0\Demo.DB.Interface.pdb
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.MySql\obj\Debug\netstandard2.0\Demo.DB.MySql.csprojAssemblyReference.cache
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.MySql\obj\Debug\netstandard2.0\Demo.DB.MySql.AssemblyInfoInputs.cache
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.MySql\obj\Debug\netstandard2.0\Demo.DB.MySql.AssemblyInfo.cs
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.MySql\obj\Debug\netstandard2.0\Demo.DB.MySql.csproj.CoreCompileInputs.cache
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.MySql\obj\Debug\netstandard2.0\Demo.DB.MySql.csproj.CopyComplete
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.MySql\obj\Debug\netstandard2.0\Demo.DB.MySql.dll
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.MySql\obj\Debug\netstandard2.0\Demo.DB.MySql.pdb

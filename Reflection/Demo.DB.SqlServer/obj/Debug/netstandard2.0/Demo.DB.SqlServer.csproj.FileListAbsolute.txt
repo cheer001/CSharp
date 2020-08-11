@@ -1,0 +1,12 @@
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.SqlServer\bin\Debug\netstandard2.0\Demo.DB.SqlServer.deps.json
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.SqlServer\bin\Debug\netstandard2.0\Demo.DB.SqlServer.dll
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.SqlServer\bin\Debug\netstandard2.0\Demo.DB.SqlServer.pdb
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.SqlServer\bin\Debug\netstandard2.0\Demo.DB.Interface.dll
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.SqlServer\bin\Debug\netstandard2.0\Demo.DB.Interface.pdb
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.SqlServer\obj\Debug\netstandard2.0\Demo.DB.SqlServer.csprojAssemblyReference.cache
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.SqlServer\obj\Debug\netstandard2.0\Demo.DB.SqlServer.AssemblyInfoInputs.cache
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.SqlServer\obj\Debug\netstandard2.0\Demo.DB.SqlServer.AssemblyInfo.cs
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.SqlServer\obj\Debug\netstandard2.0\Demo.DB.SqlServer.csproj.CoreCompileInputs.cache
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.SqlServer\obj\Debug\netstandard2.0\Demo.DB.SqlServer.csproj.CopyComplete
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.SqlServer\obj\Debug\netstandard2.0\Demo.DB.SqlServer.dll
+E:\learnspace\.NetProject\CSharp\Reflection\Demo.DB.SqlServer\obj\Debug\netstandard2.0\Demo.DB.SqlServer.pdb

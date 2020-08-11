@@ -1,11 +1,67 @@
+类库在编译后会变成dll文件
+控制台程序编译后会变成exe文件
+
 dll-IL-metadata-反射：
-
+	System.Reflection
+	.Net框架提供帮助类库 ，可以读取并使用metadata
 反射加载dll,读取module、类、方法、特性：
-
+	反射加载dll
+		Assembly assembly = Assembly.Load("Demo.DB.MySql");//dll名称无后缀  从当前目录加载
+	读取module、类、方法、特性
+		foreach (var item in assembly.GetModules())
+        {
+            Console.WriteLine(item.FullyQualifiedName);
+        }
+		Assembly assembly = Assembly.Load("Demo.DB.MySql");//dll名称无后缀  从当前目录加载  1.加载dll
+		Type type = assembly.GetType("Demo.DB.MySql.MySqlHelper");  //2.获取类型信息
+		object oDBHelper = Activator.CreateInstance(type);//3.创建对象
+		IDBHelper iDBHelper = (IDBHelper)oDBHelper;//4.类型转换
+		iDBHelper.Query();//5.方法调用
 反射创建对象，反射加简单工厂+配置文件  破坏单例   创建泛型
-
+	反射创建对象
+		Assembly assembly = Assembly.Load("Demo.DB.MySql");//dll名称无后缀  从当前目录加载  1.加载dll
+		Type type = assembly.GetType("Demo.DB.MySql.MySqlHelper");  //2.获取类型信息
+		object oDBHelper = Activator.CreateInstance(type);//3.创建对象
+		IDBHelper iDBHelper = (IDBHelper)oDBHelper;//4.类型转换
+		iDBHelper.Query();//5.方法调用
+	反射加简单工厂+配置文件
+		简单工厂
+			private static string IDBHelperConfig = ConfigurationManager.AppSettings["IDBHelperConfig"];
+			private static string DllName = IDBHelperConfig.Split(',')[0];
+			private static string TypeName = IDBHelperConfig.Split(',')[1];
+			public static IDBHelper CreateHelper()
+			{
+				Assembly assembly = Assembly.Load(DllName);//dll名称无后缀  从当前目录加载  1.加载dll
+				Type type = assembly.GetType(TypeName);  //2.获取类型信息
+				object oDBHelper = Activator.CreateInstance(type);//3.创建对象
+				IDBHelper iDBHelper = (IDBHelper)oDBHelper;//4.类型转换
+				return iDBHelper;
+			}
+		配置文件
+			<appSettings>
+				<add key="IDBHelperConfig" value="Demo.DB.MySql,Demo.DB.MySql.MySqlHelper"/>
+			</appSettings>
+	破坏单例
+		通过反射可以调用到单例类中的私有构造
+		Assembly assembly = Assembly.Load("Demo.DB.SqlServer");
+        Type type = assembly.GetType("Demo.DB.SqlServer.Singleton");
+        Singleton singleton4 =(Singleton)Activator.CreateInstance(type, true);
+	创建泛型
+		Assembly assembly = Assembly.Load("Demo.DB.SqlServer");
+        Type type = assembly.GetType("Demo.DB.SqlServer.GenericClass`3");//使用反单引号(`)后面跟泛型个数
+        Type newType = type.MakeGenericType(new Type[] { typeof(int), typeof(string), typeof(DateTime) });
+        object oGeneric = Activator.CreateInstance(newType);
 反射调用实例方法、静态方法、重载方法、  调用私有方法、调用泛型方法
-
+	
 反射字段和属性，分别获取值和设置值
-
+	Type typePeople = typeof(People);
+	Type typeDTO = typeof(PeopleDTO);
+	object peopleDTO = Activator.CreateInstance(typeDTO);
 反射的好处和局限
+	好处
+		动态获取类的内部结构，减少硬编码
+	局限
+		写法复杂
+		避开编译器的检查
+		性能问题(会比硬编码多查找和创建的操作，但影响不大)
+	
